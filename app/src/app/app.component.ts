@@ -11,6 +11,7 @@ import { ChatService } from './services/chat.service';
 export class AppComponent {
   newMessage: string = "";
   messageList: string[] = [];
+  myTheme: string = "halloween";
 
   constructor(private chatService: ChatService) {
 

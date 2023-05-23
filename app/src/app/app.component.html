@@ -1,5 +1,6 @@
 <router-outlet></router-outlet>
 
+<main data-theme={myTheme}>
 <div *ngFor="let message of messageList">
     <li>
         {{message}}
@@ -8,3 +9,8 @@
 
 <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
 <button (click)="sendMessage()">Send Message</button>
+
+<footer>
+    If you enjoy this, consider <a href="https://buymeacoffee.com/joshenz" target="_blank" >buying us a coffee! ☕</a>
+</footer>
+</main>
