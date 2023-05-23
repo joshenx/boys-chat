@@ -1,14 +1,16 @@
 <router-outlet></router-outlet>
 
 <main data-theme={myTheme}>
-<div *ngFor="let message of messageList">
+<div class="m-5" *ngFor="let message of messageList">
     <li>
         {{message}}
     </li>  
 </div>
 
-<input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
-<button (click)="sendMessage()">Send Message</button>
+<div>
+    <input class="input input-bordered input-primary w-full max-w-xs mx-5" [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+    <button class="btn btn-wide" (click)="sendMessage()">Send Message</button>
+</div>
 
 <footer>
     If you enjoy this, consider <a href="https://buymeacoffee.com/joshenz" target="_blank" >buying us a coffee! ☕</a>
